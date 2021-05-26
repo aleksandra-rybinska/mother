@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial Narrow';
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(253, 91, 91);
+}
+
+.card {
+    margin: 50px auto 0;
+    width: 300px;
+    height: 450px;
+}
+
+.card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card__inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front {
+    background: #4e9cf5;
+
+}
+
+.card__face--back {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(248, 187, 73);
+    transform: rotateY(180deg);
+}
+
+.flowers {
+    margin: 55px 5px 5px 5px;
+}
+
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: #0d214d;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+    text-align: center;
+    margin-top: 10px;
+    color: #0d214d;
+}
+
+p {
+    color: #0d214d;
+    margin: 100px 15px 20px 15px;
+    text-align: center;
+    font-size: 25px;
+}
+
+h3 {
+    color: #0d214d;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.heart {
+    width: fit-content;
+    margin-top: 20px;
+    animation: scaleheart 2.5s alternate infinite ease-in;
+}
+
+@keyframes scaleheart {
+    0% {transform: scale(.8);}
+    100% {transform: scale(1.2);}
+}
